@@ -82,3 +82,9 @@ public class TCommandConsumer : IConsumer<TCommand>
 
 
 **PS**: _Publisher_ and _Consumer_ services must be used same _TCommand_ interface. This case important for MassTransit integration.
+
+There are several options you can set via fluent interface:
+
+- `.UseRetryPolicy(IRetryPolicy retryPolicyement)`
+- `.UseCircuitBreaker(int tripThreshold, int activeThreshold, int resetInterval)`
+- `.UseRateLimiter(int rateLimit, int interval)`
